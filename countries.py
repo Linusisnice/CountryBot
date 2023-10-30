@@ -22,15 +22,10 @@ client = discord.Client(intents=intents)
 mode="off"
 temp=0
 
-asked="off"
+asked="#"
         
-
-    
-
     
 @client.event
-
-
 
 async def on_ready():
         
@@ -44,50 +39,65 @@ questions = [
 {
 "name":"is the country in africa",
  "is the country in africa":True,
+ "continent":True,
 },
 { 
 "name":"is the country in oceania",
 "is the country in oceania":True, 
+"continent":True,
 },
 { 
 "name":"is the country in europe",
  "is the country in europe":True,
+ "continent":True,
 },
 { 
 "name":"is the country in north america",
 "is the country in north america":True, 
+"continent":True,
 },
 {
 "name":"is the country in south america",
  "is the country in south america":True,
+ "continent":True,
 },
 { 
 "name":"is the country in asia",
 "is the country in asia":True, 
+"continent":True,
 },
-{
-"name":"is the country in the northern hemesphere",
- "is the country in the northern hemesphere":True, 
-},
-{
-"name":"is the country in the southern hemesphere",
- "is the country in the southern hemesphere":True,
-},]
+#{
+#    "name":"is the country in the northern hemesphere",
+#    "is the country in the northern hemesphere":True, 
+#    },
+#    {
+#    "name":"is the country in the southern hemesphere",
+#    "is the country in the southern hemesphere":True,
+#    },
+]
         
 
             
       
 
-    
                       
     
 def thequestion():
     global asked
     global questions
-    plain_string_questions = [q["name"] for q in questions]
-    asked = r.choice(plain_string_questions)
-    questions = [question for question in questions if question["name"] != asked]
-    print(asked)
+    global norss
+    #plain_string_questions = [q["name"] for q in questions]
+    norss=[1,2]
+    questionnr=1
+    if questionnr==1:
+        nors=r.choice(norss)
+        print (nors)
+        if nors==1:
+            asked="is the country in the northern hemesphere"
+            print("asked n" + asked)
+        if nors==2:
+            asked="is the country in the southern hemesphere"
+            print("asked s" + asked)
 
 
 
@@ -679,6 +689,6 @@ async def on_message(message):
         if message.content==("landlocked"):
             ()
 
-client.run('MTAzNTg1MDY2NDgwNDM3MjUxMA.Gta8Wm.n3pudYLaFTGWd6c_d5vXzlcN363pKcCoz97zyY')
+client.run('MTAyMTQ2NDI1NTg2NzkyODY1Nw.G31fuh.I7oCOsgq0NNIYN7TK9XzigEy_QOCOn61wNAOZk')
     
 
